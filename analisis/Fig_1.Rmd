@@ -9,7 +9,7 @@ output: pdf_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-# 1. R basico
+# 1. R basico (no tan basico)
 
 ```{r}
 #install.packages(tidyverse)
