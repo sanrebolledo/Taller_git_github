@@ -261,7 +261,7 @@ alta_plot <- ggplot(geodata_longer,aes(x = count, y = depth)) +
     facet_geochem_gridh(
       vars(values),
       default_units = "%") +
-    labs(x = NULL, y = "Depth (pchl)") +
+    labs(x = NULL, y = "Depth (cm)") +
     scale_x_continuous(breaks = scales::breaks_extended(n = 3)) +
     theme_set(theme_paleo(8)) +
     theme(
