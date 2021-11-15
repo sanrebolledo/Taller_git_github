@@ -2,7 +2,7 @@
 title: "Trabajando con datos en profundidad, creando diagramas estratigráficos"
 author: "Equipo UPWELL"
 date: "28/10/2021"
-output: pdf_document
+output: html_document
 ---
 
 ```{r setup, include=FALSE}
@@ -112,7 +112,7 @@ head(LEM)
 ### Cómo crear subconjuntos con filter
 
 ```{r filt, echo=TRUE, eval = FALSE}
-lem <- filter(LEM, rate <= 0.5)
+lem <- filter(LEM, ratio <= 0.5)
 ```
 
 ### Cómo seleccionar columnas con select
@@ -261,7 +261,7 @@ alta_plot <- ggplot(geodata_longer,aes(x = count, y = depth)) +
     facet_geochem_gridh(
       vars(values),
       default_units = "%") +
-    labs(x = NULL, y = "Depth (cm)") +
+    labs(x = NULL, y = "Depth (pchl)") +
     scale_x_continuous(breaks = scales::breaks_extended(n = 3)) +
     theme_set(theme_paleo(8)) +
     theme(
